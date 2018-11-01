@@ -13,11 +13,11 @@ class HorarioService {
 
     public function criar ($listaHorarios = []) {
 
-        // foreach ($listaHorarios as $value) {
-        //     $horario = new Horarios();
-        //     $horario->fill($value);
-        //     $horario->save();
-        // }
+        foreach ($listaHorarios as $value) {
+            $horario = new Horarios();
+            $horario->fill($value);
+            $horario->save();
+        }
 
         $this->agruparPorHora();
         $this->maiorOcorrenciaEMedia();
